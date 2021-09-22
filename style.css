@@ -1,0 +1,46 @@
+.wrapper {
+    display: grid;
+     grid-template-columns: 80% 20%;
+     grid-template-rows: 20% 10% 50% 20%;
+     grid-template-areas: "header header"
+                         "menu menu"
+                         "main ad"
+                         "footer footer";
+     height: 100vh;
+ } 
+
+#header {
+    background-color:forestgreen;
+    grid-area: header;
+    display: grid;
+    place-content: center;
+    width: 100%;
+}
+
+#sections {
+    grid-area: menu; 
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1/5 1/5 1/5 1/5 1/5;
+            grid-template-areas: "home info about vol donate";
+    text-align: center;
+}
+    #sections :hover{
+        background-color: gray;
+    }
+#home {
+    place-content: center;
+}
+
+#text {
+    grid-area: main;
+    padding-left: 30px;
+}
+
+#advertisments {
+    grid-area: ad;
+}
+
+#footer {
+    grid-area: footer;
+}
