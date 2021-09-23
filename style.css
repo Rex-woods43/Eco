@@ -3,21 +3,27 @@
     --banner-colour: slategrey;
 }
 
+html, body {
+    overflow-x: hidden;
+    margin:0px; 
+    padding:0px;
+}
+
 .wrapper {
     display: grid;
      grid-template-columns: 80% 20%;
-     grid-template-rows: 70px auto auto;
-     grid-template-areas:"menu menu"
-                        "myImage myImage"
+     grid-template-rows:  auto auto;
+     grid-template-areas:"myImage myImage"
                          "main ad";
  } 
 
 #sections {
     position: fixed;
     top: 0;
+    left: 0px;
+    padding: none;
     background-color: var(--banner-colour);
-    grid-area: menu; 
-    width: 100vw;
+    width: 100%;
     height: 70px;
     display: grid;
     grid-template-rows: 1/6 1/6 1/6 1/6 1/6 1/6;
@@ -30,35 +36,45 @@
     background-color: var(--accent-colour);
 }
 
+#sections a {
+    text-decoration: none;
+    color: black;
+}
+
 #myImage {
     z-index: -1;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('homephoto.webp');
     height: 700px;
     width: 100vw;
-    position: relative;
     text-align: center;
     font-size: 30px;
-
+    margin-top: 60px;
+    left: 0px;
 }
 
     #myImage h1{
         position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
     }
 
 #text {
     grid-area: main;
-    padding-left: 30px;
+    padding-left: 80px;
 }
 
 #advertisments {
     grid-area: ad;
+    margin: 20px;
 }
 
-#footer {
-    grid-area: footer;
+    #advertisments a {
+        margin-right: 20px;
+    }
+
+#myFooter {
+    outline: 1px solid red;
+    background-color: violet;
 }
