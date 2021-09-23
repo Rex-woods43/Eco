@@ -1,6 +1,6 @@
 :root {
     --accent-colour: forestgreen;
-    --banner-colour: slategrey;
+    --banner-colour: rgb(99, 99, 99);
 }
 
 html, body {
@@ -11,10 +11,11 @@ html, body {
 
 .wrapper {
     display: grid;
-     grid-template-columns: 80% 20%;
-     grid-template-rows:  auto auto;
+     grid-template-columns: 75% 25%;
+     grid-template-rows:  auto auto auto;
      grid-template-areas:"myImage myImage"
-                         "main ad";
+                         "main ad"
+                         "current ad";
  } 
 
 #sections {
@@ -30,26 +31,89 @@ html, body {
             grid-template-areas: "logo home info about vol donate";
     text-align: center;
 }
-#sections img{
-    width: 100px;
-    height: auto;
-    background-color: var(--accent-colour);
-}
+        #sections img{
+            width: 100px;
+            height: auto;
+            background-color: var(--accent-colour);
+        }
 
-#sections a {
-    text-decoration: none;
-    color: black;
-}
+        #sections a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #home {
+            
+            height: 60px;
+            line-height: 16px;
+            margin: 5px;
+            padding-top: -100px;
+        }
+
+        #home:hover {
+            background-color: rgb(67, 68, 70);
+        }
+        
+        #info {
+            
+            height: 60px;
+            line-height: 16px;
+            margin: 5px;
+            padding-top: -100px;
+        }
+
+        #info:hover {
+            background-color: rgb(67, 68, 70);
+        }
+
+        #about {
+            
+            height: 60px;
+            line-height: 16px;
+            margin: 5px;
+            padding-top: -100px;
+        }
+
+        #about:hover {
+            background-color: rgb(67, 68, 70);
+        }
+
+        #vol {
+            
+            height: 60px;
+            line-height: 16px;
+            margin: 5px;
+            padding-top: -100px;
+        }
+
+        #vol:hover {
+            background-color: rgb(67, 68, 70);
+        }
+
+        #donate {
+            border: black;
+            border-style: solid;
+            height: 55px;
+            line-height: 10px;
+            margin: 5px;
+            padding-top: -100px;
+        }
+
+        #donate:hover {
+            background-color: rgb(67, 68, 70);
+        }
 
 #myImage {
     z-index: -1;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('homephoto.webp');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('homephoto.webp');
     height: 700px;
     width: 100vw;
     text-align: center;
     font-size: 30px;
     margin-top: 60px;
     left: 0px;
+    box-shadow: 0px 10px 18px #888888;
+    background-size: cover;
 }
 
     #myImage h1{
@@ -63,18 +127,52 @@ html, body {
 #text {
     grid-area: main;
     padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 20px;
 }
+
+    #text h1 {
+        font-size: 40px;
+    }
+
+#current {
+    display: grid;
+    grid-template-columns: 1/3 1/3 1/3;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "gbr bushtext river"
+                          "gbrtext bush rivertext";
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+    #current img {
+        padding: 10px;
+        height: 200px;
+        width: 250px;
+    }
 
 #advertisments {
     grid-area: ad;
     margin: 20px;
 }
 
-    #advertisments a {
-        margin-right: 20px;
+    #coles img {
+        right: 20px;
     }
 
-#myFooter {
-    outline: 1px solid red;
-    background-color: violet;
+.myFooter {
+    padding-top: 5px;
+    padding-left: 10px;
+    background-color: var(--banner-colour);
+    height: 150px;
+}
+
+.myFooter img, p {
+    display: inline-block;
+}
+
+.myFooter img {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
 }
