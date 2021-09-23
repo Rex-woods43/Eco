@@ -1,36 +1,54 @@
+:root {
+    --accent-colour: forestgreen;
+    --banner-colour: slategrey;
+}
+
 .wrapper {
     display: grid;
      grid-template-columns: 80% 20%;
-     grid-template-rows: 20% 10% 50% 20%;
-     grid-template-areas: "header header"
-                         "menu menu"
-                         "main ad"
-                         "footer footer";
-     height: 100vh;
+     grid-template-rows: 70px auto auto;
+     grid-template-areas:"menu menu"
+                        "myImage myImage"
+                         "main ad";
  } 
 
-#header {
-    background-color:forestgreen;
-    grid-area: header;
-    display: grid;
-    place-content: center;
-    width: 100%;
-}
-
 #sections {
+    position: fixed;
+    top: 0;
+    background-color: var(--banner-colour);
     grid-area: menu; 
-    width: 100%;
+    width: 100vw;
+    height: 70px;
     display: grid;
-    grid-template-rows: 1/5 1/5 1/5 1/5 1/5;
-            grid-template-areas: "home info about vol donate";
+    grid-template-rows: 1/6 1/6 1/6 1/6 1/6 1/6;
+            grid-template-areas: "logo home info about vol donate";
     text-align: center;
 }
-    #sections :hover{
-        background-color: gray;
-    }
-#home {
-    place-content: center;
+#sections img{
+    width: 100px;
+    height: auto;
+    background-color: var(--accent-colour);
 }
+
+#myImage {
+    z-index: -1;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('homephoto.webp');
+    height: 700px;
+    width: 100vw;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+    #myImage h1{
+        position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  
+    }
 
 #text {
     grid-area: main;
