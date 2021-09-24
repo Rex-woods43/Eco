@@ -16,7 +16,7 @@ html, body {
 button {
     height: 45px;
 }
-
+    /* Whole page grids: start */
 .wrapper {
     display: grid;
      grid-template-columns: 75% 25%;
@@ -44,7 +44,8 @@ button {
     margin-left: 100px;
     margin-right: 100px;
 }
-
+    /* whole page grids: end */
+    /* header/nav bar: start */
 #sections {
     z-index: 1000;
     position: fixed;
@@ -58,6 +59,7 @@ button {
     grid-template-rows: 1/6 1/6 1/6 1/6 1/6 1/6;
             grid-template-areas: "logo home info about vol donate";
     text-align: center;
+    border-bottom: solid rgb(59, 59, 59) 3px;
 }
         #sections img{
             width: 100px;
@@ -135,6 +137,8 @@ button {
             background-color: rgb(67, 68, 70);
         }
 
+    /* header/nav bar: end */
+    /* Index: start */
 .index {
 margin-top: 120px;
 margin-left: 20px;
@@ -148,10 +152,11 @@ position: fixed;
     .index a:hover {
         text-decoration: underline;
     }
-
+    /* Index: end */
+    /* home page: start */
 #myImage {
     z-index: 100;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('koala.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('images/koala.jpg');
     height: 700px;
     width: 100vw;
     text-align: center;
@@ -217,7 +222,8 @@ position: fixed;
     margin-top: 100px;
     grid-area: coles;
 }
-
+    /* Home page: end */
+    /* info page: start */
 #topic1 {
     margin-top: 120px;
     margin-left: 20px;
@@ -253,7 +259,8 @@ hr {
 #ebay {
     grid-area: advertise;
 }
-
+    /* info page: end */
+    /* about page: start */
 #abouteco {
     height: 400px;
     width: 300px;
@@ -349,7 +356,8 @@ hr {
     #undervalue {
         margin-bottom: 40px;
     }
-
+    /* about page: end */
+    /* volunteer page: start */
 #myTable {
     margin-top: 120px;
 }
@@ -377,12 +385,14 @@ table, th, td {
 #volBody img {
     width: 50vw;
 }
-
+    /* volunteer page: end */
+    /* donate page: start */
 #donatefunds {
     margin-top: 100px;
     text-align: center;
 }
-
+    /* donate page: end */
+    /* footer: start */
 .myFooter {
     padding-top: 5px;
     padding-left: 10px;
@@ -422,8 +432,10 @@ table, th, td {
 #greenfooter {
     background-color: var(--accent-colour);
 }
+    /* footer: end */
 
 @media (max-width: 900px) {
+    /* home page media: start */
     .wrapper {
         display: grid;
         grid-template-columns: 100vw;
@@ -464,6 +476,8 @@ table, th, td {
         #coles img {
             margin: 20px;
         }
+    /* home page media: end */
+
     
     .infowrapper {
         display: grid;
