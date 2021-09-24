@@ -7,6 +7,16 @@
     <title>Eco</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="200x200" href="favicon.ico">
+    <!-- <script>
+function darkMode () {
+     document.documentElement.style.setProperty("--back-colour", "black");
+     document.documentElement.style.setProperty("--text-colour", "white");
+}
+function lightMode () {
+     document.documentElement.style.setProperty("--back-colour", "white");
+     document.documentElement.style.setProperty("--text-colour", "black");
+}
+    </script> -->
 </head>
 
 <body>
@@ -23,6 +33,7 @@
 
     <div id="myImage">
         <h1>Helping Get the Earth Back on it's Feet</h1>
+        <img src="bigwad.png">
     </div>
     
      <div id= "text">
@@ -68,6 +79,8 @@
         <img src="facebook.png">
         <img src="twitter.jpg">
         <span>@eco.the.environmentalists</span>
+        <button class="darkTheme" onclick = "darkMode()"><p>Dark Mode</p></button>
+        <button class="lightTheme" onclick = "lightMode()"><p>Light Mode</p></button>
     </div>
    
 </body>

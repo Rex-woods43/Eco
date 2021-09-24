@@ -9,6 +9,8 @@ html, body {
     overflow-x: hidden;
     margin:0px; 
     padding:0px;
+    background-color:var(--back-colour);
+    color: var(--text-colour);
 }
 
 .wrapper {
@@ -20,11 +22,19 @@ html, body {
                          "current ebay";
  } 
 
- .infowrapper {
+.infowrapper {
      display: grid;
      grid-template-columns: 20% 55% 25% ;
      grid-template-areas: "index mybody advertise";
  } 
+
+.volwrapper {
+    display: grid;
+    grid-template-columns: 20% 55% 25% ;
+     grid-template-areas: "index volBody advert";
+}
+    #volBody{grid-area: volBody;}
+    #advert{grid-area: advert;}
 
 #whole {
     margin-left: 100px;
@@ -53,6 +63,9 @@ html, body {
 
         #sections a {
             text-decoration: none;
+        }
+
+        #sections h2 {
             color: black;
         }
 
@@ -127,10 +140,13 @@ position: fixed;
         text-decoration: none;
         color: black;
     }
+    .index a:hover {
+        text-decoration: underline;
+    }
 
 #myImage {
     z-index: -1;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('homephoto.webp');
+    /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('homephoto.webp'); */
     height: 700px;
     width: 100vw;
     text-align: center;
@@ -146,7 +162,7 @@ position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: white;
+        color: black;
     }
 
 #text {
@@ -217,7 +233,7 @@ position: fixed;
 hr {
     width: 80%;
 }
-#top2 {
+.infowrapper hr {
     margin-bottom: 80px;
 }
 
@@ -332,7 +348,21 @@ table, th, td {
 
  #headrow {
      font-weight: bold;
- }
+}
+
+#advert img {
+    margin-top: 500px;
+    height: 200px;
+    width: 300px;
+}
+
+#volBody hr {
+    margin-bottom: 80px;
+}
+
+#volBody img {
+    width: 50vw;
+}
 
 #donatefunds {
     margin-top: 100px;
@@ -405,6 +435,8 @@ table, th, td {
         grid-template-areas: "index" 
                               "mybody" 
                               "advertise";
+        margin-left: 20px;
+        margin-right: 20px;
     } 
 
        
@@ -458,12 +490,7 @@ table, th, td {
     
         #owner {
             margin-left: 20px;
-            /* display: grid;
-            grid-template-columns: 100vw;
-            grid-template-rows: auto auto;
-            grid-template-areas: "pic"
-                                 "ownertext"; */
-                                 display: inline;
+            display: inline;
             justify-content: center;
             text-align: center;
         }
@@ -479,4 +506,22 @@ table, th, td {
             margin-left: 15px;
             margin-right: 15px;
         }
+
+    .volwrapper {
+        display: inline;
+    }
+
+    #volBody {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #advert img {
+        margin-top: 20px;
+    }
+
+    #myTable {
+        margin-top: 40px;
+    }
+
 }
