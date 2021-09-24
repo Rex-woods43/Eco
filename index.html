@@ -7,16 +7,7 @@
     <title>Eco</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="200x200" href="favicon.ico">
-    <!-- <script>
-function darkMode () {
-     document.documentElement.style.setProperty("--back-colour", "black");
-     document.documentElement.style.setProperty("--text-colour", "white");
-}
-function lightMode () {
-     document.documentElement.style.setProperty("--back-colour", "white");
-     document.documentElement.style.setProperty("--text-colour", "black");
-}
-    </script> -->
+    <script type='text/javascript' src="java.js"></script>
 </head>
 
 <body>
@@ -79,9 +70,8 @@ function lightMode () {
         <img src="facebook.png">
         <img src="twitter.jpg">
         <span>@eco.the.environmentalists</span>
-        <button class="darkTheme" onclick = "darkMode()"><p>Dark Mode</p></button>
-        <button class="lightTheme" onclick = "lightMode()"><p>Light Mode</p></button>
+        <button id="changeTheme" onclick = "darkMode()">Dark Mode</button>
     </div>
    
 </body>
-</html>  
+</html>
