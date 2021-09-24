@@ -168,7 +168,7 @@ position: fixed;
     grid-area: myImage;
 }
 
-    #myImage h1{
+    #myImage h1 {
         position: absolute;
         top: 50%;
         left: 50%;
