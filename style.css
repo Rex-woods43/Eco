@@ -513,7 +513,7 @@ table, th, td {
 
 @media (max-width: 700px) {
     .myFooter {
-        height: 200px;
+        height: 220px;
     }
     #current {
         display: grid;
