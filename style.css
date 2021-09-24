@@ -46,6 +46,7 @@ button {
 }
 
 #sections {
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0px;
@@ -149,8 +150,8 @@ position: fixed;
     }
 
 #myImage {
-    z-index: -1;
-    /* background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('homephoto.webp'); */
+    z-index: 100;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('koala.jpg');
     height: 700px;
     width: 100vw;
     text-align: center;
@@ -159,6 +160,7 @@ position: fixed;
     left: 0px;
     box-shadow: 0px 10px 18px #888888;
     background-size: cover;
+    grid-area: myImage;
 }
 
     #myImage h1{
@@ -166,7 +168,7 @@ position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: black;
+        color: white;
     }
 
 #text {
